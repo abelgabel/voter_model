@@ -21,6 +21,19 @@ agents0<-matrix(0,nrow=N^2, ncol=3)
 
 
 
+
+# Compute coordinates of agents
+x_axis<-rep(1,N)
+for(i in 2:N)
+{ x_axis <-c(x_axis,rep(i,N))}
+
+y_axis <-seq(1,N,by=1)
+for(i in 2:N)
+{ y_axis <-c(y_axis,seq(1,N,by=1))}
+# Agents cordinate are in column 2 and 3
+agents0[,2]<-x_axis
+agents0[,3]<-y_axis
+
 # ################################################
 # Initial Condition
 # ################################################
@@ -39,17 +52,6 @@ agents0[agents0[,2]<=2 | agents0[,3]<=2 | agents0[,2]>=N-2 |agents0[,3]-1>=N-2,1
 
 
 
-# Compute coordinates of agents
-x_axis<-rep(1,N)
-for(i in 2:N)
-{ x_axis <-c(x_axis,rep(i,N))}
-
-y_axis <-seq(1,N,by=1)
-for(i in 2:N)
-{ y_axis <-c(y_axis,seq(1,N,by=1))}
-# Agents cordinate are in column 2 and 3
-agents0[,2]<-x_axis
-agents0[,3]<-y_axis
 
 
  
