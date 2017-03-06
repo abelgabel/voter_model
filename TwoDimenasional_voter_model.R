@@ -56,7 +56,7 @@ agents0[,3]<-y_axis
 # Create plot:
 # Color black: opinon -1, color red: opinion 1
 colmat<-matrix(agents0[,1], nrow=N ,ncol=N)
-levelplot(colmat,col.regions=c('black','red'),xlab='',ylab='',colorkey=F, main='Initial Condition')
+print(levelplot(colmat,col.regions=c('black','red'),xlab='',ylab='',colorkey=F, main='Initial Condition'))
 
 
 
